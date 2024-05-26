@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="description" content="Chat PETは、沢山の飼い主と自慢の我が子を共有できるペットを愛でるサイトです。"/>
+    <title>プロフィール作成画面</title>
+    <link rel="icon" href="/Users/KikuS/Front work/img/Untitled_logo_1_free-file.jpg" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">     
+    <link rel="stylesheet" href=”Fチーム/Chat PET/static/css/profile_create.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <img src="/Users/KikuS/Front work/img/Untitled_logo_1_free-file.jpg" alt="アイコン" class="header_icon">
+            <h1>プロフィール編集</h1>            
+        </header>
+
+        <main class="main">
+
+            <div class="user_icon">
+
+                <!-- フォームで選択した画像 -->
+              <img id="img" accept="image/*" src="https://tool-engineer.work/wp-content/uploads/2022/06/default.png">
+      
+              <div class="buttons">
+              <!-- フォーム -->
+              <label for="file_upload" class="cutom_file_upload">
+                  <img src="/Users/KikuS/Front work/img/Folder.png" alt="画像選択アイコン" class="file_upload_icon">
+                  <input type="file" name="image" id="file_upload" accept=".jpg, .jpeg, .png, .gif">
+              </label>
+              
+      
+              <!-- 画像削除ボタン -->
+              <button type="button" id="delete">削除</button>
+              </div>
+      
+                  <form action="#" method="post">
+      
+                      <section class="section_name">
+                          <p class="id_text"></p>ニックネーム：
+                          <p><input type="text" name="ニックネーム" class="nickname"></p>
+                      </section>
+      
+                      <section  class="section_explanation">
+                          <p class="explanation_text">説明：</p>
+                          <textarea class="explanation"></textarea>
+                      </section>
+      
+                      <div class="button">
+                          <p><input type="button" value="プロフィール編集" id="profile_create"></p>
+                      </div>
+                      
+                  </form>
+              </main>
+      
+              <footer class="footer">
+                  <div></div>
+              </footer>
+              <!-- JSの適応 -->
+              <script src="/Fチーム/Chat PET/statoc/js/profile_create.js" defer></script>
+              <script>
+             //プレビュー表示
+              const previewImage = () => {
+                  const fileInput = document.getElementById("file-input");
+                  const imagePreview = document.getElementById("image-preview");
+              
+              if (fileInput.files && fileInput.files[0]) {
+              const reader = new FileReader();
+              reader.onload = (e) => (imagePreview.src = e.target.result);
+              reader.readAsDataURL(fileInput.files[0]);
+              imagePreview.hidden = false;
+              }
+              };
+              </script>
+    </div>
+</body>
+</html>

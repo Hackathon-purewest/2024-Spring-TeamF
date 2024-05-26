@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャットルーム</title>
+    <link rel="stylesheet" href="/Fチーム/Chat PET/static/css/chat.css">
+</head>
+<body>
+</body>
+    <!-- よう：body全体の大きさを定義する、
+    div.wrapperタグを追加し、body全体を囲む。-->
+    <div class="wrapper">
+        <!-- よう：div.wrapperタグの子要素として、
+        .containerタグを追加し、div#filed全体を
+        覆うことで要素の大きさを整理する。 -->
+        <div class="container">
+            <div class="header">
+                <h1>Chat Room</h1>
+            </div>
+            
+            <!--画面-->
+            <div id= "field">
+                <ul id= "chat-ul">
+                    <li class="chat-right">
+                        <div>
+                            <p>太郎</p>
+                            <p>アイコン</p>
+                        </div>
+                        <div>
+                            <p>メッセージ</p>
+                        </div>
+                    </li>
+                    <li class="chat-left">
+                        <div>
+                            <p>二郎</p>
+                            <p>アイコン</p>
+                        </div>
+                        <div>
+                            <p>メッセージ</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+               <!--入力場所，送信ボタン-->
+                <div id="orange-frame">
+                    <div id= "input-field">
+                        <input type= "text" id= "chat-input">
+                        <input type= "button" value= "Send" id= "chat-button" onclick= "btnFunc()">
+                    </div>
+                     <!-- よう：ホーム、削除、画像アップロード各アイコン -->
+                    <div class="buttons">
+                        <!--　よう：ホームボタンの追加 -->
+                        <button type="button" class="home_button">
+                            <img src="/Users/KikuS/local_work_front/hackathon/Fチーム/Front work/img/ホームアイコン.png" alt="ホーム" class="buttons">
+                        </button>
+                        <!-- よう：削除ボタンの追加 -->
+                        <button type="button" class="delete_button">
+                            <img src="/Users/KikuS/local_work_front/hackathon/Fチーム/Front work/img/ゴミ箱アイコン.png" alt="ゴミ箱" class="buttons">
+                        </button>
+                        <!-- よう：画像アップロードボタンの追加 -->
+                        <label for="file_upload" class="cutom_file_upload">
+                            <img src="/Users/KikuS/local_work_front/hackathon/Fチーム/Front work/img/画像選択アイコン.png" alt="画像選択アイコン" class="file_upload_icon">
+                            <input type="file" name="image" id="file_upload" accept=".jpg, .jpeg, .png, .gif">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+
+</body>
+</html>
+
